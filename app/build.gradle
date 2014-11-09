@@ -1,0 +1,45 @@
+buildscript {
+    dependencies {
+        repositories {
+            mavenCentral()
+        }
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        applicationId "com.eevoskos.android_peristence_tests"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v13:21.0.0'
+    compile 'com.android.support:appcompat-v7:21.0.0'
+    compile 'com.jakewharton:butterknife:6.0.0'
+    compile 'nl.qbusict:cupboard:2.1.1'
+    compile 'com.jakewharton.timber:timber:2.4.1'
+    compile 'io.realm:realm-android:0.73.1'
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}

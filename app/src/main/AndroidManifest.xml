@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eevoskos.android_peristence_tests">
+
+    <application
+        android:name="com.eevoskos.android_peristence_tests.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.eevoskos.android_peristence_tests.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.eevoskos.android_peristence_tests.cupboard.CupboardWriteTest"
+            android:label="Cupboard Write Test"
+            android:parentActivityName="com.eevoskos.android_peristence_tests.MainActivity" />
+        <activity
+            android:name="com.eevoskos.android_peristence_tests.cupboard.CupboardReadTest"
+            android:label="Cupboard Read Test"
+            android:parentActivityName="com.eevoskos.android_peristence_tests.MainActivity" />
+        <activity
+            android:name="com.eevoskos.android_peristence_tests.realm.RealmWriteTest"
+            android:label="Realm Write Test"
+            android:parentActivityName="com.eevoskos.android_peristence_tests.MainActivity" />
+        <activity
+            android:name="com.eevoskos.android_peristence_tests.realm.RealmReadTest"
+            android:label="Realm Read Test"
+            android:parentActivityName="com.eevoskos.android_peristence_tests.MainActivity" />
+    </application>
+
+</manifest>
