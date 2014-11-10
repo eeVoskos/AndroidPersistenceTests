@@ -18,7 +18,7 @@ Preliminary results for 1K, 10K and 100K items (times are in milliseconds):
 
 | | 1K | 10K | 100K |
 |---|---|---|---|
-| Cupboard | 83 | 711 | 4204 |
+| Cupboard | 80 | 705 | 4189 |
 | Realm | 21 | 131 | 892 |
 
 #### Read

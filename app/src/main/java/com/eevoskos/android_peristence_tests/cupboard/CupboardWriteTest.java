@@ -23,9 +23,7 @@ public class CupboardWriteTest extends TestActivity {
             item.setValue(i);
             items.add(item);
         }
-        SQLiteDatabase db = new CupboardSQLiteOpenHelper(CupboardWriteTest.this).getWritableDatabase();
         cupboard().withDatabase(db).put(items);
-        db.close();
     }
 
     @Override
