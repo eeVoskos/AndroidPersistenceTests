@@ -18,17 +18,17 @@ Preliminary results for 1K, 10K and 100K items (times are in milliseconds):
 
 | | 1K | 10K | 100K |
 |---|---|---|---|
-| Cupboard | 90 | 711 | 5423 |
-| Realm | 28 | 155 | 1264 |
+| Cupboard | 83 | 711 | 4204 |
+| Realm | 21 | 131 | 892 |
 
 #### Read
 
 | | 1K | 10K | 100K |
 |---|---|---|---|
-| Cupboard | 0 | 1 | 1 |
-| Realm | 2 | 27 | 336 |
+| Cupboard | 134 | 2136 | 26873 |
+| Realm | 114 | 752 | 6892 |
 
-_Tests were performed on a Genymotion Nexus 4 Android 4.4.4 emulator._
+_Tests were performed on a MacBook Pro 2013 using Genymotion Nexus 4 Android 4.4.4 emulator._
 
 #### Comparison
 Initial tests indicate that Realm is much faster than Cupboard (SQLite) in writes, but much slower in reads.

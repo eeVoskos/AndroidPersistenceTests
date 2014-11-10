@@ -51,6 +51,8 @@ public abstract class TestActivity extends Activity {
     }
 
     public abstract void onRun(int itemsPerRun);
+    public abstract void startTest();
+    public abstract void stopTest();
 
     class TestRunTask extends AsyncTask<Integer, Long, Void> {
 
@@ -67,6 +69,7 @@ public abstract class TestActivity extends Activity {
             int numberOfRuns = params[0];
             int itemsPerRun = params[1];
 
+            startTest();
             for (int i = 0; i < numberOfRuns; i++) {
                 long start = System.nanoTime();
                 onRun(itemsPerRun);
@@ -74,6 +77,7 @@ public abstract class TestActivity extends Activity {
                 long dt = TimeUnit.NANOSECONDS.toMillis(end - start);
                 publishProgress(dt);
             }
+            stopTest();
 
             return null;
         }

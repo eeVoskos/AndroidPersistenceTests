@@ -12,6 +12,8 @@ import static nl.qbusict.cupboard.CupboardFactory.cupboard;
 
 public class CupboardWriteTest extends TestActivity {
 
+    private SQLiteDatabase db;
+
     @Override
     public void onRun(int itemsPerRun) {
         List<ItemInterface> items = new ArrayList<ItemInterface>();
@@ -26,4 +28,13 @@ public class CupboardWriteTest extends TestActivity {
         db.close();
     }
 
+    @Override
+    public void startTest() {
+        db = new CupboardSQLiteOpenHelper(CupboardWriteTest.this).getWritableDatabase();
+    }
+
+    @Override
+    public void stopTest() {
+        db.close();
+    }
 }
