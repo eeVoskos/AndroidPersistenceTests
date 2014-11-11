@@ -31,7 +31,7 @@ Preliminary results for 1K, 10K and 100K items (times are in milliseconds):
 _Tests were performed on a MacBook Pro 2013 using Genymotion Nexus 4 Android 4.4.4 emulator._
 
 #### Comparison
-Initial tests indicate that Realm is much faster than Cupboard (SQLite) in writes, but much slower in reads.
+Initial tests indicate that Realm is much faster than Cupboard (SQLite), with 3.8x-5.3x faster writes and 1.17x-3.8 faster reads.
 
 [1]: https://bitbucket.org/qbusict/cupboard
 [2]: https://github.com/realm/realm-java
